@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-grey: #efefef;
+  --white: #ffffff;
+  --very-dark-blue: #0a0a23;
+  --light-purple: #a78bfa;
+  --very-light-purple: #5d5775;
+  --reddish: #da140d;
+}
+
+body {
+    background-color: var(--light-grey);
+  color: var(--very-dark-blue);
+  font-family: sans-serif;
+}
+
+main {
+    max-width: 1100px;
+    margin: 200px auto;
+    text-align: center;
+}
+
+h1 {
+    background-color: var(--light-purple);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.gallery-item {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.gallery-item:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s ease-out;
+}
+
+
+.lightbox {
+    display: none; /* Initially hidden - Test 13 */
+    position: fixed; /* Test 9 */
+    top: 0;         /* Test 11 */
+    left: 0;        /* Test 11 */
+    width: 100%;    /* Test 10 */
+    height: 100%;   /* Test 10 */
+    background-color: rgba(0, 0, 0, 0.9); /* Test 12 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.lightbox button {
+    cursor: pointer;
+    border: none;
+    position: fixed; /* Test 9 */
+    top: 10px;         /* Test 11 */
+    right: 40px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--light-grey);
+    font-size: 2.5rem;
+}
+.lightbox img{
+    object-fit: cover;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+
